@@ -9,7 +9,21 @@
 #pragma once
 
 #include "../JuceLibraryCode/JuceHeader.h"
+struct Car
+{
+	struct CarSeat 
+	{
+		bool seatIsLeather;
+	};
+	int numberOfWheels;
+	bool convertible;
+	CarSeat driversSeat;
+	CarSeat navigatorsSeat;
 
+	bool switchSeats(CarSeat oldSeat, CarSeat newSeat);
+
+	void accelerate(float howFarToPushThePedal);
+};
 //==============================================================================
 /*
     This component lives inside our window, and this is where you should put all
